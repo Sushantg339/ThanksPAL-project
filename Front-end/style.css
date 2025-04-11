@@ -1,26 +1,25 @@
-🧱 Global Boilerplate
+/* 🧱 Global Boilerplate */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
     font-family: 'Arial', sans-serif;
-    /* cursor: default; */
 }
 
 html, body {
     height: 100%;
     width: 100%;
-    background-color: #0e0e0e; /* Dark base background */
+    background-color: #0e0e0e;
 }
-body{
+body {
     overflow-x: hidden;
 }
-#main{
+#main {
     height: 100%;
     width: 100%;
 }
-#cursor{
+#cursor {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -41,17 +40,16 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent; /* Slight transparency for blur */
+    background: transparent;
     backdrop-filter: blur(8px);
     transition: top 0.3s ease-in-out;
     z-index: 10;
-
     border-bottom: 1px solid #222;
 }
 
 #left h1 {
     font-size: 2rem;
-    color: #c9a4ff; /* Brand purple */
+    color: #c9a4ff;
 }
 
 #right a {
@@ -64,7 +62,6 @@ body{
     transition: color 0.3s ease;
 }
 
-/* Sleek underline on nav links */
 #right a::after {
     content: '';
     position: absolute;
@@ -88,31 +85,30 @@ body{
 }
 
 /* tagline scroller */
-#tagline{
+#tagline {
     height: 100%;
     width: 100%;
     background-color: #7647bb;
     display: flex;
     align-items: center;
     padding: 5rem 4rem;
-    
 }
-#tagline h1{
+
+#tagline h1 {
     white-space: nowrap;
     font-size: 37vw;
     color: #000;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     font-weight: 500;
 }
-#tagline:hover, #tagline h1:hover{
+
+#tagline:hover, #tagline h1:hover {
     cursor: default;
 }
 
-
-
 /* 🚀 Hero Section */
 #hero {
-    padding: 12rem 2rem 5rem; /* Reduced bottom padding */
+    padding: 12rem 2rem 5rem;
     text-align: center;
     background-color: #121212;
     min-height: 100vh;
@@ -134,7 +130,6 @@ body{
     line-height: 1.6;
 }
 
-  
 #hero button {
     margin-top: 7rem;
     padding: 1rem 3rem;
@@ -146,22 +141,7 @@ body{
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-} 
-/* #hero button {
-    margin-top: 7rem;
-    padding: 1rem 3rem;
-    background: #c9a4ff;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.3rem;
-    color: #0e0e0e;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-} */
-
-
-  
+}
 
 #hero button:hover,
 #hero button:focus {
@@ -229,7 +209,6 @@ body{
     flex-wrap: wrap;
 }
 
-/* Testimonial Cards */
 .card {
     background: #222;
     border: 1px solid #333;
@@ -241,7 +220,7 @@ body{
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(201, 164, 255, 0.3); /* Purple hover glow */
+    box-shadow: 0 0 15px rgba(201, 164, 255, 0.3);
 }
 
 .card img {
@@ -265,7 +244,43 @@ body{
     font-style: italic;
 }
 
-/* 📱 Responsive Media Queries */
+/* 🦶 Footer Styling */
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 5rem 3rem 3rem;
+    background-color: #0e0e0e;
+    border-top: 1px solid #222;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+#footer h3,
+#footer h4 {
+    color: #c9a4ff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#footer p,
+#footer a {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer a:hover {
+    color: white;
+}
+
+/* 📱 Responsive */
 @media (max-width: 900px) {
     #hero h1 {
         font-size: 2.4rem;
@@ -301,6 +316,12 @@ body{
         margin-left: 1rem;
         font-size: 0.9rem;
     }
+
+    .footer-content,
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
 }
-
-
