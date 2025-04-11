@@ -10,13 +10,15 @@
     <div id="main">
         <div id="login">
             <h1>Welcome back!</h1>
-            <div id="container">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Login</button>
-            </div>
-            <h5>Don't have an account?<a href="signup.html">Sign-up</a></h5>
-
+            <form action="/signin" method="POST">
+                <div id="container">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <h5>Don't have an account? <a href="signup.html">Sign-up</a></h5>
         </div>  
     </div>
 </body>
