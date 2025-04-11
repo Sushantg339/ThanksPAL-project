@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ThanksPal Button Animation Test</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: #0e0e0e;
+    }
+
+    #main {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #121212;
+      width: 100%;
+    }
+
+    #hero h1 {
+      font-size: 3rem;
+      color: #c9a4ff;
+      margin-bottom: 0.5rem;
+    }
+
+    #hero h4 {
+      font-size: 1.2rem;
+      color: #bdbdbd;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    #hero button {
+      padding: 1rem 3rem;
+      background: #c9a4ff;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      color: #0e0e0e;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="hero">
+      <h1>Built for Creators,</h1>
+      <h1>Loved by Supporters</h1>
+      <h4>Whether you write, draw, stream, or teach — this is your home for fan support.</h4>
+      <button>Start Your Page</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script>
+      const button = document.querySelector("#hero button");
+      console.log("Button found:", button);
+
+
+      gsap.from(button, {
+  scale: 0,
+  opacity: 0,
+  duration: 1.5,
+  ease: "power4.out",
+  onComplete: () => console.log("Animation completed!")
+});
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Boilerplate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+#main {
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Signup box */
+#signup {
+    background-color: #181818;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    max-width: 420px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(201, 164, 255, 0.1);
+}
+
+/* Heading */
+#signup h1 {
+    color: #c9a4ff;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Container for inputs */
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Input styles */
+input {
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #292929;
+    color: white;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(201, 164, 255, 0.4);
+}
+
+/* Button styles */
+button {
+    padding: 0.9rem 1rem;
+    background-color: #c9a4ff;
+    border: none;
+    border-radius: 2rem;
+    color: #0e0e0e;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(201, 164, 255, 0.4);
+}
+
+/* Login redirect text */
+#signup h5 {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#signup h5 a {
+    margin-left: 0.5rem;
+    color: #c9a4ff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#signup h5 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #c9a4ff;
+    transition: width 0.3s ease;
+}
+
+#signup h5 a:hover::after {
+    width: 100%;
+}
